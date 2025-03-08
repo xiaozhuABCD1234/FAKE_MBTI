@@ -67,3 +67,9 @@ async def js():
 @app.get("/style.css")
 async def css():
     return FileResponse("static/style.css")
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run("main:app", port=8000, reload=False)
