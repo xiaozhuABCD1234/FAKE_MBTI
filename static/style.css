@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f2f5;
+}
+
+.container {
+	display: flex;
+	gap: 20px;
+	height: 95vh;
+	max-width: 1200px;
+	margin: 20px auto;
+	padding: 0 20px;
+}
+
+.left,
+.right {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+	flex: 1;
+	max-width: 400px;
+}
+
+.right {
+	flex: 2;
+	min-height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	color: #1a1a1a;
+	margin-bottom: 20px;
+	font-size: 24px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	color: #666;
+	font-size: 14px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+button {
+	background: #007bff;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+	font-size: 16px;
+	transition: background 0.3s;
+}
+
+button:hover {
+	background: #0056b3;
+}
+
+button:disabled {
+	background: #cccccc;
+	cursor: not-allowed;
+}
+
+.preview-img {
+	max-width: 100%;
+	margin-top: 10px;
+	border-radius: 4px;
+}
+
+.error {
+	color: #dc3545;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.loading {
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.show {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+.text {
+	flex: 4; /* 占40%高度 */
+	min-height: 200px; /* 最小高度保证内容展示 */
+	display: flex;
+	flex-direction: column;
+	justify-content: center; /* 垂直居中 */
+	align-items: center; /* 水平居中 */
+	text-align: center;
+	padding: 20px;
+}
+
+.img {
+	flex: 6; /* 占60%高度 */
+	display: flex;
+	justify-content: center;
+	align-items: flex-end; /* 图片贴底显示 */
+	padding: 20px;
+}
+/* 新增图片容器样式 */
+.result-image {
+	margin-top: auto; /* 关键：将图片推到底部 */
+	padding: 20px;
+	text-align: center;
+}
+
+/* 调整原有样式 */
+.preview-img {
+	max-width: 100%;
+	max-height: 70vh; /* 限制图片最大高度 */
+	border-radius: 4px;
+	object-fit: contain; /* 保持图片比例 */
+}
+.show h1 {
+	color: #333;
+	margin-bottom: 15px;
+}
+
+.show div {
+	font-size: 24px;
+	margin: 10px 0;
+	color: #007bff;
+	font-weight: bold;
+}
+
+.show img {
+	max-width: 80%;
+	margin-top: 20px;
+}
